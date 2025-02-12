@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="reset.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="nav">
+        <h1>Dashboard</h1>
+        <ul class="menu">
+            <li><img src="images/home.svg" alt="Home"><a href="#">Home</a></li>
+            <li><img src="images/account-card-outline.svg" alt="User Profile"><a href="#">User Profile</a></li>
+            <li><img src="images/email-open.svg" alt="Messages"><a href="#">Messages</a></li>
+            <li><img src="images/book-edit-outline.svg" alt="Register"><a href="#">Register</a></li>
+            <li><img src="images/book-open-page-variant-outline.svg" alt="Agenda"><a href="#">Agenda</a></li>
+            <li><img src="images/exclamation-thick.svg" alt="Accidents"><a href="#">Accidents</a></li>
+            <li><img src="images/chart-bar.svg" alt="Statistics"><a href="#">Statistics</a></li>
+            <li><img src="images/checkbox-multiple-marked-circle.svg" alt="Assenssments"><a href="#">Assessments</a></li>
+            <li><img src="images/database.svg" alt="Database"><a href="#">Database</a></li>
+            <li><img src="images/exit-to-app.svg" alt="Exit"><a href="#">Exit</a></li>
+        </ul>
+
+    </div>
+    <header>
+        <form id="dashboard_form" method="post" action="#">
+            <label for="search">Search: </label>
+            <input id="search" type="text" maxlength="50">
+        </form>
+        <div class="user">
+            <button type="button" id="notifications"><img src="images/bell-outline.svg" alt="notifications"></button>
+            <img class="avatar small" alt="avatar" src="images/avatar.svg">
+            <p>John Doe</p>
+        </div>
+        <div class ="heading">
+            <img class="avatar big" alt="avatar" src="images/avatar.svg">
+            <h2>Work safety application</h2>
+            <h3> - Welcome, John Doe - </h3>
+        </div>
+        <div class ="button_panel">
+            <button id="new" type="button">New</button>
+            <button id="load" type="button">Load</button>
+            <button id="exit" type="button">Exit</button>
+        </div>
+        
+
+    </header>
+    <main>
+        <div class="container">
+            <h3>Recent projects</h3>
+                <div class = "projects">
+                <article class="project">
+                    <h4>Lion Tamer risk assessment</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam quos non officiis repellat debitis? Ea magni consectetur sint laboriosam ex, blanditiis nostrum reiciendis, quas ab sed dolorum hic necessitatibus?</p>
+                    <div class ="view_edit">
+                        <a href="#"><img src="images/pencil.svg" alt="Edit article"></a>
+                        <a href="#"><img src="images/eye-outline.svg" alt="View article"></a>
+                    </div>              
+                </article>
+                <article class="project">
+                    <h4>J.F. Kennedy accident investigation</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam quos non officiis repellat debitis? Ea magni consectetur sint laboriosam ex, blanditiis nostrum reiciendis, quas ab sed dolorum hic necessitatibus?</p>
+                    <div class ="view_edit">
+                        <a href="#"><img src="images/pencil.svg" alt="Edit article"></a>
+                        <a href="#"><img src="images/eye-outline.svg" alt="View article"></a>
+                    </div>
+                </article>
+                <article class="project">
+                    <h4>Omaha Beach landing risk assessment</h4>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam quos non officiis repellat debitis? Ea magni consectetur sint laboriosam ex, blanditiis nostrum reiciendis, quas ab sed dolorum hic necessitatibus?
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam quos non officiis repellat debitis? Ea magni consectetur sint laboriosam ex, blanditiis nostrum reiciendis, quas ab sed dolorum hic necessitatibus?
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam quos non officiis repellat debitis? Ea magni consectetur sint laboriosam ex, blanditiis nostrum reiciendis, quas ab sed dolorum hic necessitatibus?
+                    </p>
+                    <div class ="view_edit">
+                        <a href="#"><img src="images/pencil.svg" alt="Edit article"></a>
+                        <a href="#"><img src="images/eye-outline.svg" alt="View article"></a>
+                    </div>
+                </article>
+                <article class="project">
+                    <h4>Dark Souls player characters accident statistics</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam quos non officiis repellat debitis? Ea magni consectetur sint laboriosam ex, blanditiis nostrum reiciendis, quas ab sed dolorum hic necessitatibus?</p>
+                    <div class ="view_edit">
+                        <a href="#"><img src="images/pencil.svg" alt="Edit article"></a>
+                        <a href="#"><img src="images/eye-outline.svg" alt="View article"></a>
+                    </div>
+                </article>
+                <article class="project">
+                    <h4>Occupational Risk Technician risk assessment</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam quos non officiis repellat debitis? Ea magni consectetur sint laboriosam ex, blanditiis nostrum reiciendis, quas ab sed dolorum hic necessitatibus?</p>
+                    <div class ="view_edit">
+                        <a href="#"><img src="images/pencil.svg" alt="Edit article"></a>
+                        <a href="#"><img src="images/eye-outline.svg" alt="View article"></a>
+                    </div> 
+                </article>
+            </div>
+        </div>
+        <aside>
+            <div class="issues">
+                <h3>Last issues</h3>
+                <div class="aside-container">
+                    <article class="issue">
+                        <h4>Important meeting tomorrow!</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsamquos non officiis repellat debitis?</p>
+                    </article>
+                    <article class="issue">
+                        <h4>New accident in Springfield nuclear plant</h4>
+                        <p>Homer Simpson dolor sit amet consectetur adipisicing elit. Aut ipsamquos non officiis repellat debitis?</p>
+                    </article>
+                    <article class="issue">
+                        <h4>Fiat will manufacture the new Volvo model</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam quos non officiis repellat debitis?</p>
+                    </article>
+                </div>
+            </div>
+            <div class="tasks">                
+                <h3>Pending tasks</h3>
+                <div class="aside-container">
+                    <article class="task">
+                        <h4>Finish this damn report right now!</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam quos non officiis repellat debitis?</p>
+                    </article>
+                    <article class="task">
+                        <h4>Replace lead in life jackets</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam quos non officiis repellat debitis?</p>
+                    </article>
+                    <article class="task">
+                        <h4>Pay the arrears to the guardian angel</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam quos non officiis repellat debitis?</p>
+                    </article>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
