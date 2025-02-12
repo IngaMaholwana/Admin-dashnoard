@@ -1,0 +1,336 @@
+@font-face {
+    font-family: concert-one;
+    src: url(fonts/ConcertOne-Regular.ttf);
+  }
+
+:root{
+    --main-bg-color: burlywood;
+    --nav-bg-color: rgb(35, 148, 123);
+    --nav-text-color: white;
+    --header-bg-color: #afa1a1;
+    --container-bg-color: #dfecf0;
+    --aside-bg-color: #f36060;
+    --issues-bg-color: #f072db;
+    --tasks-bg-color: yellow;
+    --active-link-color: rgb(199, 13, 236);
+    --article-bg-color: white;
+    --shadow: gray;
+}
+
+body{
+    width: 1400px;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: min(150px, 1fr) 5fr;
+    background-color: black;
+    font-family: Helvetica, Arial, sans-serif, system-ui;
+}
+
+.nav{
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+}
+
+h1, h2, h3{
+    font-family: concert-one, Verdana, Geneva, Tahoma, sans-serif, system-ui;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+}
+
+h1{
+    font-size: 2.5rem;
+    display: block;
+    margin: 20px 40px;
+    align-self: center;
+}
+
+.container h3{
+    padding: 20px 20px 0px;
+}
+
+.nav ul{
+    display: grid;
+    align-items: center;
+    color: var(--nav-text-color);
+    text-decoration: none;
+}
+
+.nav ul li{
+    display: block;
+    font-size: 1.5rem;
+    color: var(--nav-text-color);
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 50px;
+    padding: auto 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1.5rem;
+    display: inline;
+    fill: var(--nav-text-color);
+}
+
+.nav ul li a:link, .nav ul li a:visited{
+    color: var(--nav-text-color);
+    text-decoration: none;
+}
+
+.nav ul li:hover a{
+    font-size: 1.7rem;
+}
+
+.nav ul li:hover img{
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.nav ul li a:active{ 
+    color: var(--active-link-color);
+}
+
+
+header{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: var(--article-bg-color);
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    height: 150px;
+    z-index: 1;
+    box-shadow: var(--shadow) 0px 5px 3px 0px;
+}
+
+form{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.user{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.heading{
+    grid-row: 2;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: 1f 1fr;
+}
+
+.heading h2{
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    justify-self: self-start;
+}
+
+.heading h3{
+    grid-column: 2;
+    grid-row: 2;
+    align-self: flex-start;
+    justify-self: self-start;
+}
+
+.button_panel{
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+}
+
+img[alt="avatar"].small{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+
+img[alt="avatar"].big{
+    grid-column: 1;
+    grid-row: span 2;
+    align-self: center;
+    justify-self: center;
+    width: 4rem;
+    height: 4rem;
+}
+
+main{
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: var(--main-bg-color);
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
+}
+
+.container{
+    background-color: var(--container-bg-color);
+
+}
+
+aside{
+    background-color: var(--aside-bg-color);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project .view_edit{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+}
+
+.project .view_edit a{
+    align-self: bottom;
+    padding-left: 1.5em;
+}
+
+.project img{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+article.project{
+    border-left: 5px solid orange;
+    border-radius: 5px;
+    padding: 20px;
+    height: 250px;
+    overflow: hidden;
+    background-color: var(--article-bg-color);
+    box-shadow: var(--shadow) 5px 5px 5px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+}
+
+article.project p{
+    overflow: hidden;
+
+}
+
+.issues, .tasks{
+    background-color: var( --container-bg-color);
+    padding: 0 20px 0 0;
+    
+}
+
+.issues h3, .tasks h3{
+    padding: 10px;
+}
+
+
+article.issue, article.task{
+    padding: 0px 10px 10px;
+    height: 120px;
+    overflow: hidden;
+    background-color: var(--article-bg-color);
+
+}
+
+article.issue + article.issue::before, article.task+ article.task::before{
+    content: "............"
+}
+
+article.issue p, article.task p{
+    text-overflow: ellipsis;
+}
+
+.aside-container{
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: var(--shadow) 2px 2px 5px 2px;
+    background-color: var( --article-bg-color);
+}
+
+.button_panel button{
+    padding: 7px 30px;
+    margin: 0 10px;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--shadow) 3px 3px 3px 3px;
+    font-family: 1.2em;
+    font-weight: bold;
+    align-self: center;
+    justify-self: center;
+}
+
+.button_panel button:active{
+    box-shadow: var(--shadow) 1px 1px 0px 0px;
+    color: var(--active-link-color);
+    
+}
+
+.button_panel{
+    align-self: center;
+    justify-self: center;
+    
+}
+
+form{
+    padding: 20px 10px 10px;
+    
+}
+
+#search{
+    background-color: rgb(218, 241, 234);
+    border: none;
+    width: 500px;
+    border-radius: 20px;
+    padding: 0 1em;
+}
+
+#search:focus, #search:active, #search:focus:active{
+    border: none !important;
+    outline: none !important;
+    
+}
+
+label[for="search"]{
+    color: rgb(0,0,0,0);
+    background-image: url(images/magnify.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.5rem;
+    width: 2em;
+    height: 40px;
+    padding: 5px;
+
+}
+
+#notifications{
+    width: 2em;
+    height: 40px;
+    padding: 5px;
+    margin: 0 2em;
+    border: none;
+    background-color: var(--article-bg-color);
+}
